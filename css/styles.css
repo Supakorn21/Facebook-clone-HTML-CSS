@@ -232,7 +232,7 @@
 }
 .sidenav{
     width: 25%;
-    margin-right: 125px;
+    
 }
 .sidenav__item{
     display: flex;
@@ -340,11 +340,13 @@
 
 /* feed */
 .feed{
-    width: 590px;
+    width: 50%;
     height: 200px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    /* margin-left: 125px;
+    margin-right: 125px; */
 }
 .stories{
     display: flex;
@@ -659,9 +661,7 @@
     
     
 }
-.photopost__link-like{
-    
-}
+
 .photopost__link .fas{
     margin: 10px;
     font-size: 1.1rem;
@@ -715,6 +715,159 @@
     font-weight: 700;
     z-index: 3;
 }
+/* createroom feed */
+.feed__box-createroom{
+    /* padding: 20px; */
+    background: var(--fb-whitebg);
+    max-width: 700px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px 0px var(--shadow-color);
+    margin-bottom: 20px;
+    /* display: flex; */
+    padding: 10px 20px 10px;
+}
+.feedbox-createroom-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.createroom__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 25px;
+    border: 1px solid var(--fb-blue);
+}
+.createroom__button:hover{
+    background: var(--button-link);
+}
+.createroom__button .fas{
+    margin: 10px 5px;
+    font-size: 1.1rem;
+}
+.createroom__button .fa-video{
+    color: var(--fb-blue);
+}
+.createroom__title{
+    color: #524eee;
+}
+.createroom__active{
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 0px;
+    position: relative;
+}
+.createroom__active-users{
+    position: relative;
+    cursor: pointer;
+}
+.createroom__item-img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+.creatroom__notification-active{
+    background: var(--fb-green);
+    color: white;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    border: .5px solid var(--fb-white);
+    top: 30px;
+    left: 30px;
+    
+}
+.createroom__active-users{
+    margin-right: 10px;
+}
+.createroom__new-btn-right{
+    background: var(--fb-white);
+    width: 45px;
+    height: 45px;
+    color: var(--light-color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 1px 2px 0px rgb(49 39 39 / 25%);
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    cursor: pointer;
+    z-index: 3;
+}
+.createroom__new-btn-right:hover{
+    background: var(--button-link);
+}
+
+/* sidenav right */
+.sidenav__right{
+    width: 25%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidenav__right-heading-title{
+    display: block;
+    color: var(--light-color-text);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+.sidenav__right-item{
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.sidenav__right-support-container{
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background: var(--stories-bg);
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+}
+.sidenav__right-img{
+    object-fit: cover;
+    object-position: center;
+    width: 150px;
+    height: 150px;
+}
+.sidenav__right-description{
+    font-size: 15px;
+}
+.sidenav__right-actions{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.sidenav__right-actions:hover{
+    background: var(--button-link);
+}
 
 /* responsive */
 @media only screen and (max-width: 1300px){
@@ -723,6 +876,7 @@
     }
     .feed{
         width: 100%;
+        position: relative;
     }
 }
 @media only screen and (max-width: 1000px){
@@ -770,6 +924,26 @@
     .content-area--feed{
         width: 100%;
     }
+    .createroom__active{
+        flex-wrap: nowrap;
+        z-index: 9;
+        
+        overflow-x: scroll;
+    }
+    .createroom__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+        margin-right: 5px;
+        border-radius: 25px;
+        border: 1px solid var(--fb-blue);
+    }
+    .createroom__new-btn-right{
+        display: none;
+    }
 }
 @media only screen and (max-width: 411px){
     .header__account{
@@ -779,4 +953,10 @@
         display: none;
     }
 }
+
+
+
+
+
+
 
