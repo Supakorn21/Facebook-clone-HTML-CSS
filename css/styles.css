@@ -829,12 +829,16 @@
     color: var(--light-color-text);
     font-size: 1.1rem;
     margin-bottom: 15px;
+    margin-left: 10px;
 }
 .sidenav__right-item{
     display: flex;
     max-width: 700px;
     width: 100%;
     margin-bottom: 20px;
+    position: relative;
+}
+.sidenav__right-support-area{
     position: relative;
 }
 .sidenav__right-support-container{
@@ -857,6 +861,9 @@
 .sidenav__right-description{
     font-size: 15px;
 }
+.sidenav__right-box-actions{
+    margin-bottom: 15px;
+}
 .sidenav__right-actions{
     display: flex;
     justify-content: start;
@@ -864,10 +871,97 @@
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    margin-bottom: 0px;
+    z-index: 5;
+    position: relative;
 }
-.sidenav__right-actions:hover{
+.sidenav__right-button{
+        background: var(--fb-white);
+        width: 45px;
+        height: 45px;
+        color: var(--light-color-text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0px 1px 2px 0px rgb(49 39 39 / 25%);
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        cursor: pointer;
+        position: absolute;
+        cursor: pointer;
+}
+
+.sidenav__right-button:hover{
     background: var(--button-link);
 }
+.sidenav__right-actions:hover {
+    background: var(--button-link);
+}
+.sidenav__right-birthday{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.sidenav__right-birthday .fa-gift{
+    color: var(--fb-blue);
+}
+.sidenav__right-birthday .fas{
+    margin: 10px;
+    font-size: 1.5rem;
+}
+.sidenav__right-birthday:hover{
+    background: var(--button-link);
+}
+.sidenav__right-heading-contact{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px;
+}
+.sidenav__right-contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sidenav__right-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidenav__right-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0px 3px;
+}
+.sidenav__right-item:hover{
+    background: var(--button-link);
+}
+.sidenav__right-friends{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+}
+.sidenav__right-friends:hover{
+    background: var(--button-link);
+}
+
+
+
 
 /* responsive */
 @media only screen and (max-width: 1300px){
