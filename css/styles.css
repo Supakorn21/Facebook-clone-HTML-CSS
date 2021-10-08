@@ -818,10 +818,10 @@
 /* sidenav right */
 .sidenav__right{
     width: 25%;
-    height: 200px;
+    /* height: 200px;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .sidenav__right-heading-title{
@@ -972,9 +972,13 @@
         width: 100%;
         position: relative;
     }
+    
 }
 @media only screen and (max-width: 1000px){
     .sidenav{
+        display: none;
+    }
+    .sidenav__right{
         display: none;
     }
 }
